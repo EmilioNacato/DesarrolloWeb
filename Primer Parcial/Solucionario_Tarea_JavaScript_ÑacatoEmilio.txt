@@ -1,0 +1,121 @@
+Datos primitivos
+----------------
+Ejercicio 1: Conversión de tipos
+En este ejercicio, se solicita al usuario que ingrese un número como cadena de texto, se
+convierte a tipo de dato numérico y se realiza una operación matemática
+
+let texto = prompt("Ingrese un número:"); //Solicitar numero al usuario
+let numero = Number(texto); //Convertimos el texto a numero
+console.log("El número ingresado es: " + numero); //Imprimir el numero ingresado
+let resultado = numero * 2; //Al numero ingresado le multiplicamos por dos
+console.log("Su resultado es: " + resultado); //Mostramos el resultado
+
+Ejercicio 2: Verificación de tipo de dato
+En este ejercicio, se solicita al usuario que ingrese un valor y se muestra en la consola el
+tipo de dato utilizando el operador typeof.
+
+let valor = prompt("Ingrese un valor:"); // Solicitar al usuario que ingrese un valor
+let tipoDato = typeof valor; //Obtengo el tipo de dato
+console.log("El tipo de dato es: " + tipoDato); //Mostramos el tipo de dato
+
+TypeOf
+-------
+Ejercicio 1: Verificación de tipo de variable
+En este ejercicio, se declara una variable con un valor y se muestra en la consola el tipo de
+dato utilizando el operador typeof.
+
+let valor = "Hola mundo"; //Declaramos el tipo de dato
+console.log("El tipo de dato de la variable es: " + typeof valor); //Mostramos el tipo de dato
+
+Ejercicio 2: Verificación de tipo de argumento de función
+En este ejercicio, se define una función que recibe un argumento y se muestra en la consola
+el tipo de dato utilizando el operador typeof.
+
+function verificarTipoDato(argumento) { //Creamos la funcion
+  console.log("El tipo de dato del argumento es: " + typeof argumento); //Imprimirmos el vamos
+} //Cierre de la funcion
+
+verificarTipoDato(3,14); // Llamada a la función con un argumento numérico
+verificarTipoDato("Hola mundo"); // Llamada a la función con un argumento de tipo cadena de texto
+verificarTipoDato(true); // Llamada a la función con un argumento booleano
+
+Variables, Declaración, Inicialización, console.log
+-----------------------------------------------------
+Ejercicio 1: Operaciones con variables
+En este ejercicio, se declaran dos variables, se les asignan valores y se realiza una
+operación matemática con ellas. El resultado se muestra en la consola.
+
+let numero1 = 10; //Declaramos nuestro primer numero
+let numero2 = 56; //Declaramos nuestro segundo numero
+let resultado = numero1 + numero2; //Hacemos la operacion matematica
+console.log("El resultado de la operación es: " + resultado); //Mostramos el resultado
+ 
+Ejercicio 2: Concatenación de variables y texto
+En este ejercicio, se declaran variables con valores de cadena de texto y se realiza la
+concatenación de ellas con texto adicional. El resultado se muestra en la consola.
+
+let nombre = "Juan"; //Declaramos la primera variable
+let edad = 25; //Declaramos la segunda variable
+console.log("Hola mi nombre es " + nombre + " y tengo " + edad + " años de edad."); //Mostramos la concatenacion
+
+Funciones
+---------
+Ejercicio 1: Suma de dos números utilizando function declaration
+En este ejercicio, se define una función utilizando function declaration que recibe dos
+números, los suma y devuelve el resultado. Se realiza la llamada a la función y se muestra
+el resultado en la consola.
+
+function sumar(numero1, numero2) { //Creacion de la funcion suma
+  return numero1 + numero2; //Retornamos el valor sumado de los dos numeros
+} //Cierre de la funcion
+
+let resultado = sumar(5, 3); //Llamada a la funcion
+console.log("El resultado de la suma es: " + resultado); //Mostramos el resultado
+
+
+Ejercicio 2: Cálculo del área de un triángulo utilizando function expression (función
+anónima)
+En este ejercicio, se utiliza una función expresiva o función anónima para calcular el área de
+un triángulo. La función recibe la base y la altura como parámetros, realiza el cálculo del
+área y devuelve el resultado. Se realiza la llamada a la función y se muestra el resultado en
+la consola.
+
+let calcularAreaTriangulo = function(base, altura) { //Creacion de la funcion del triangulo
+  return (base * altura) / 2; //Operaciones para su calculo
+}; //Cierre de la funcion
+
+let area = calcularAreaTriangulo(5, 8); //LLamada a la funcion
+console.log("El área del triángulo es: " + area); //Mostramos el resultado
+
+Ejercicio 1: Acceso a variables dentro y fuera de una función
+En este ejercicio, se declara una variable global y una variable local dentro de una función.
+Se muestra en la consola el valor de ambas variables tanto dentro como fuera de la función
+para observar el alcance de cada una.
+
+let variableGlobal = "Esta es una variable global";
+function mostrarVariables() {
+  let variableLocal = "Soy una variable local";
+  console.log("Dentro de la función - Variable global: " + variableGlobal);
+  console.log("Dentro de la función - Variable local: " + variableLocal);
+}
+
+mostrarVariables();
+console.log("Fuera de la función - Variable global: " + variableGlobal);
+console.log("Fuera de la función - Variable local: " + variableLocal); // Esto mostrará un error, ya que la variable local solo existe dentro de la función
+
+
+Ejercicio 2: Acceso a variables con el mismo nombre en diferentes ámbitos
+En este ejercicio, se declara una variable con el mismo nombre en el ámbito global y en una
+función. Se muestra en la consola el valor de ambas variables para observar cómo se
+accede a ellas y cuál prevalece en cada contexto.
+
+let variableGlobal = "Soy una variable global";
+function mostrarVariable() {
+  var variableLocal = "Soy una variable local";
+  console.log("Dentro de la función - Variable: " + variableLocal);
+}
+mostrarVariable();
+console.log("Fuera de la función - Variable: " + variableGlobal);
+
+
+
