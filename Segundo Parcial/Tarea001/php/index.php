@@ -24,45 +24,32 @@
             </div>
             <div class="col-lg-8">
                 <div class="card-body py-5 px-md-5">
-
-                <form method="POST" action="php/login.php" onsubmit="return validarFormulario()">
+                    <form method="POST" action="php/login.php" onsubmit="return validarFormulario()">
                         <div class="form-group">
                             <label for="username">Usuario:</label>
-                            <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp"
-                            placeholder="Ingresa el usuario">
+                            <input type="text" class="form-control" name="username" id="username"
+                                aria-describedby="emailHelp" placeholder="Ingresa el usuario">
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="Contraseña">
                         </div>
-
                         <!-- 2 column grid layout for inline styling -->
                         <div class="row mb-4">
                             <div class="col d-flex justify-content-center">
                                 <!-- Checkbox -->
-
                             </div>
-
                         </div>
-
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-primary">Enviar</button>
-
                     </form>
-
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- Section: Design Block -->
-
-
-<form method="POST" action="php/login.php">
-
-
-    
-</form>
 
 <script>
     function validarFormulario() {

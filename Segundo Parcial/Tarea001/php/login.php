@@ -1,14 +1,17 @@
 <?php
-
 session_start();
 include("../db.php");
+
 // Obtener los datos del formulario
 $username = $_POST['username'];
 $password = $_POST['password'];
 
 // Consultar la base de datos para verificar la autenticación
-$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-$result = $conn->query($query);
+$query = "SELECT * FROM users WHERE username=? AND password=?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("ss", $username, $password);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows == 1) {
     // Autenticación exitosa, iniciar sesión
@@ -19,5 +22,6 @@ if ($result->num_rows == 1) {
     echo "Usuario o contraseña incorrectos.";
 }
 
+$stmt->close();
 $conn->close();
 ?>
